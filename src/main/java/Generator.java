@@ -13,8 +13,11 @@ import java.util.List;
 
 public class Generator {
     public static void main(String[] args) throws IOException {
-        if (args.length != 3)
+        if (args.length != 3){
+            System.out.println("Введите аргументы");
             System.exit(0);
+        }
+
         Generator generator = new Generator();
 
         String settings = args[0]; //settings file
