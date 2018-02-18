@@ -147,10 +147,13 @@ public class Generator {
             NodeList columnsList = doc.getElementsByTagName("column");
             if (!setPageSettings(pageList) || !setColumnsSettings(columnsList))
                 return false;
-        } catch (Exception e) {
+            return true;
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
+        } catch (Exception e){
             System.out.println(e);
         }
-        return true;
+        return false;
     }
 
 
